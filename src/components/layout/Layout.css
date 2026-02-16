@@ -1,0 +1,113 @@
+/* Layout Grid and Utilities */
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--top-bar-height);
+    padding: 0 var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    top: 0;
+    position: sticky;
+    z-index: 100;
+}
+
+.context-header {
+    padding: var(--space-xl) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+}
+
+.workspace-container {
+    display: flex;
+    flex: 1;
+    /* Make it fill available space */
+    overflow: hidden;
+    /* For scrolling inside panels if needed */
+    /* If footer is sticky, this needs margin bottom or footer overlay */
+    margin-bottom: 80px;
+    /* Space for footer */
+    padding: var(--space-lg);
+    gap: var(--space-lg);
+}
+
+.panel-primary {
+    flex: 7;
+    /* 70% width */
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    overflow-y: auto;
+}
+
+.panel-secondary {
+    flex: 3;
+    /* 30% width */
+    background: var(--color-bg);
+    /* Secondary panel styling: calm styling */
+    border-left: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.proof-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    /* Checklist style: UI Built, Logic Working, etc. */
+    align-items: center;
+    z-index: 200;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.proof-checklist {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.proof-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 14px;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+/* Specific Component Styling */
+.badge-status {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    border: 1px solid var(--color-border);
+    background-color: white;
+    color: var(--color-text);
+}
+
+.progress-indicator {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 14px;
+    color: #666;
+    /* Muted */
+}
+
+.step-active {
+    color: var(--color-accent);
+}

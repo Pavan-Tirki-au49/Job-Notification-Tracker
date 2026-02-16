@@ -1,0 +1,39 @@
+/* Page Layout Container */
+.page-container {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+    min-height: calc(100vh - var(--top-bar-height));
+}
+
+/* Animations using existing keyframes if possible or defining new ones */
+.animate-in {
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+}
+
+.zoom-in {
+    animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.98);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.bg-red-50 {
+    background-color: #FEF2F2;
+}

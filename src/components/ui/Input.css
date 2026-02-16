@@ -1,0 +1,40 @@
+.label {
+    display: block;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    /* Clean, slightly rounded */
+    font-family: var(--font-sans);
+    font-size: 16px;
+    background-color: white;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
+}
+
+.input-field::placeholder {
+    color: #999;
+}
+
+.input-error {
+    border-color: var(--color-error);
+}
+
+.error-message {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--color-error);
+}

@@ -1,0 +1,31 @@
+.card {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    /* Consistent with other elements */
+    overflow: hidden;
+    /* For header/footer */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #FAFAFA;
+    /* Very subtle grey */
+}
+
+.card-body {
+    padding: var(--space-lg);
+    flex: 1;
+}
+
+.card-footer {
+    padding: var(--space-md) var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    background-color: #FAFAFA;
+}

@@ -1,0 +1,70 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+    /* Prepare for border transition */
+    gap: 8px;
+    /* For icons */
+    white-space: nowrap;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Primary Button: Solid Deep Red */
+.btn-primary {
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    border-color: var(--color-accent);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-1px);
+    /* Subtle lift */
+}
+
+/* Secondary Button: Outlined */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border-color: var(--color-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    border-color: var(--color-text);
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Specific Actions Mentioned in prompt: Copy, Build in Lovable, It Worked, Error, Add Screenshot */
+/* These map to Primary/Secondary essentially */
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.btn-text:hover {
+    color: var(--color-accent);
+}
