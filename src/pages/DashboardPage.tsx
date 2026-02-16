@@ -166,8 +166,8 @@ export const DashboardPage: React.FC = () => {
                     <div>
                         <h1 className="text-3xl font-serif font-bold text-gray-900 mb-1">Job Feed</h1>
                         <p className="text-sm text-gray-500">
-                            Showing {filteredJobs.length} opportunities
-                            {showMatchesOnly ? ' matching your profile' : ' matching your criteria'}
+                            Updated daily at 9:00 AM. Showing {filteredJobs.length} opportunities
+                            {showMatchesOnly ? ' matching your profile' : ''}.
                         </p>
                     </div>
 

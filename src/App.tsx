@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import { Navigation } from './components/layout/Navigation';
 import './components/layout/Page.css';
 
@@ -25,21 +25,19 @@ const AppLayout = () => {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<AppLayout />}>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/saved" element={<SavedPage />} />
-          <Route path="/digest" element={<DigestPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/proof" element={<ProofPage />} />
-          <Route path="/jt/proof" element={<ProofPage />} />
-          <Route path="/jt/07-test" element={<TestChecklistPage />} />
-          <Route path="/jt/08-ship" element={<ShipPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route element={<AppLayout />}>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/saved" element={<SavedPage />} />
+        <Route path="/digest" element={<DigestPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/proof" element={<ProofPage />} />
+        <Route path="/jt/proof" element={<ProofPage />} />
+        <Route path="/jt/07-test" element={<TestChecklistPage />} />
+        <Route path="/jt/08-ship" element={<ShipPage />} />
+      </Route>
+    </Routes>
   );
 }
 
